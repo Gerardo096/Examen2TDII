@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script>
+        // Array con las imagenes y enlaces que se iran mostrando en la web
+
+        var imagenes = new Array(
+            ['images/imagenrotativa1.jpg', 'zapatos.html'], ['images/imagenrotativa2.jpg', 'zapatos.html'], ['images/imagenrotativa3.jpg', 'zapatos.html'], ['images/imagenrotativa4.jpg', 'zapatos.html']
+        );
+        var contador = 0;
+
+
+        // Funcion para cambiar la imagen y link
+
+        function rotarImagenes() {
+            // cambiamos la imagen y la url
+            contador++
+            document.getElementById("imagenlink").src = imagenes[contador % imagenes.length][0];
+            document.getElementById("link").href = imagenes[contador % imagenes.length][1];
+        }
+
+        // Función que se ejecuta una vez cargada la página
+
+        onload = function() {
+            // Cargamos una imagen aleatoria
+            rotarImagenes();
+
+            // Indicamos que cada 5 segundos cambie la imagen
+            setInterval(rotarImagenes, 5000);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <span class="fs-4">STREETWEAR</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Inicio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Zapatos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </header>
+    </div>
+
+
+
+
+    <div class="container text-center mb-3 d-none d-sm-block ">
+        <div class="imagenescambiando">
+            <a id="link" href="zapatos.html"><img id="imagenlink" src=""></a>
+
+        </div>
+    </div>
+    <div class="container text-center">
+
+        <p class="descripcion">Ultimas noticias y zapatos</p>
+        <div class="row">
+            <div class="col-12 col-md-6"><iframe src="https://www.youtube.com/embed/AZy3V62t9K8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="col-12 col-md-6"><iframe src="https://www.youtube.com/embed/J0ifKoot9m8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+
+
+    </div>
+
+
+    <div class="divzapatos card" style=" width: 18rem;">
+
+        <img id="imagen1" class="card-img-top" src="images/zapato3.png">
+
+        <div class="card-body">
+            <div class="card-text">
+                <h3 id="zapato2">Adidas Superstar</h3>
+                <div>Precio:
+                    <span id="precio2">90</span>€
+                </div>
+                <button type="button" id="añadir3" class="btn-lg botonañadir bg-info">Añadir al carrito<i class="fas fa-cart-plus"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="text-center" style="background-color: rgba(0, 0, 0, 0.2);">
+
+        <div class="container pt-4 ">
+
+            <section class="mb-4">
+
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://es-es.facebook.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i
+            ></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://twitter.com/?lang=es" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i
+            ></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i
+            ></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/Gerardo096" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i
+            ></a>
+            </section>
+
+        </div>
+
+
+
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-dark" href="https://github.com/Gerardo096" target="_blank">Gerardo Peña Sobera</a>
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

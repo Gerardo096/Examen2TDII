@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <script>
+        // Array con las imagenes y enlaces que se iran mostrando en la web
+
+        var imagenes = new Array(
+            ['images/imagenrotativa1.jpg', 'zapatos.html'], ['images/imagenrotativa2.jpg', 'zapatos.html'], ['images/imagenrotativa3.jpg', 'zapatos.html'], ['images/imagenrotativa4.jpg', 'zapatos.html']
+        );
+        var contador = 0;
+
+
+        // Funcion para cambiar la imagen y link
+
+        function rotarImagenes() {
+            // cambiamos la imagen y la url
+            contador++
+            document.getElementById("imagenlink").src = imagenes[contador % imagenes.length][0];
+            document.getElementById("link").href = imagenes[contador % imagenes.length][1];
+        }
+
+        // Función que se ejecuta una vez cargada la página
+
+        onload = function() {
+            // Cargamos una imagen aleatoria
+            rotarImagenes();
+
+            // Indicamos que cada 5 segundos cambie la imagen
+            setInterval(rotarImagenes, 5000);
+        }
+    </script>
+    <title>Inicio</title>
+</head>
+
+<body class="h-100 d-flex flex-column">
+    <header>
+        <div class="container-fluid fondo-navbar ">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 ">
+                <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <span class="fs-4 text-info m-1">STREETWEAR</span>
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="index.html" class="nav-link active bg-info " aria-current="page">Inicio</a></li>
+                    <li class="nav-item"><a href="zapatos.html" class="nav-link text-white">Zapatos</a></li>
+                    <li class="nav-item"><a href="carrito.html" id="vercarrito" class="nav-link text-white"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </header>
+        </div>
+        <br>
+        <p class="descripcion">Bienvenido a StreetWear, una pagina web donde comprar tus zapatos.</p>
+    </header>
+    <br>
+
+    <div class="container  mb-3 d-none d-sm-block ">
+        <div class=" row  ">
+            <div class="col-12 text-center">
+                <a id="link" href="zapatos.html"><img id="imagenlink" class="w-100 h-100 w-100 h-100"></a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container text-center d-none d-sm-block">
+
+        <p class="descripcion">Ultimas noticias y zapatos</p>
+        <div class="row">
+            <div class="col-12 col-md-6"><iframe src="https://www.youtube.com/embed/AZy3V62t9K8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="col-12 col-md-6"><iframe src="https://www.youtube.com/embed/J0ifKoot9m8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+
+
+    </div>
+    <div class="container text-center d-block d-sm-none">
+
+
+
+
+
+        <a href="https://www.youtube.com/embed/J0ifKoot9m8">Ultimos zapatos 2022</a><br>
+        <a href="https://www.youtube.com/embed/AZy3V62t9K8">Mejores zapatos 2022</a>
+
+
+    </div>
+
+    <footer class=" container-fluid text-center mt-auto mb-0 p-0" style="background-color: rgba(0, 0, 0, 0.2);">
+
+        <div class="container pt-4">
+
+            <section class="mb-4">
+
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://es-es.facebook.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i
+            ></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://twitter.com/?lang=es" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i
+            ></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i
+            ></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/Gerardo096" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i
+            ></a>
+            </section>
+
+        </div>
+
+
+
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright ALLESA
+        </div>
+
+    </footer>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

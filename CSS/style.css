@@ -1,0 +1,56 @@
+.descripcion {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+
+footer {
+    margin: auto;
+}
+
+#imagenlink {
+    max-width: 800px;
+    max-height: 800px;
+}
+
+.botonañadir {
+    border: none;
+    color: white;
+}
+
+#divzapatos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divzapatos {
+    margin: 30px;
+}
+
+#mostrarCarrito {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: black;
+    text-align: center;
+}
+
+#divcarrito {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.botonbasura {
+    border: none;
+    color: white;
+    background-color: red;
+}
+
+.fondo-navbar {
+    background-color: rgb(69, 85, 87);
+}
+
+body {
+    background-color: #40747a;
+}
